@@ -2,7 +2,7 @@
 # FILE TRANSFER WEB APPLICATION 
 
 TEAM NAME : 
-# WEBHUNTERS
+WEBHUNTERS
 
 TEAM MEMBERS NAME :
 
@@ -11,8 +11,8 @@ https://github.com/varunbzv
 
 
 AMAN SINGH CHAUHAN
+https://github.com/Amanadii
 
-SDGS
 
 ANUJ DEEP 
 
