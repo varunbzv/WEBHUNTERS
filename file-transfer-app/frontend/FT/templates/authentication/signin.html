@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Authentication</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <style>
+        body {
+            background-color: #ffffff;
+            padding: 30px;
+            font-family: 'Times New Roman';
+            border-radius: 8px;
+            border-style: solid;
+            text-align: center;
+            margin: 100px;
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            background-color: #4caf50;
+            color: white;
+            padding: 14px 20px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 250px;
+            font-size: 15px;
+            color: #ff0000;
+        }
+
+        .button {
+            background-color: #000000;
+            font-family: 'Times New Roman';
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: solid;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h2>Signin</h2>
+    <form action="/signin" method="post">
+        {% csrf_token %}
+        <label for="">Username</label>
+        <input type="text" id="username" name="username" placeholder="Create a username" required>
+        <br>
+        <label for="">Password</label>
+        <input type="password" id="pass1" name="pass1" placeholder="Enter a password" required>
+        <br>
+        <button type="submit">Sign In</button>
+    </form>
+    <div class="footer">
+        Made by WebHunters
+    </div>
+</body>
+</html>

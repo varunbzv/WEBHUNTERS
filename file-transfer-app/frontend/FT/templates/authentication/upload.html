@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>File Transfer App</title>
+<style>
+body {
+    background-color: #ffffff;
+    padding: 30px;
+    font-family: 'Times New Roman';
+    border-radius: 8px;
+    border-style: solid;
+    text-align: center;
+    margin: 100px;
+}
+
+.container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 26px;
+    background-color: #ffffff;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    margin-bottom: 30px;
+}
+
+.button {
+    background-color: #000000;
+    font-family: 'Times New Roman';
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border: solid;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.file-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.file-list li {
+    margin-bottom: 15px;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 250px;
+    font-size: 15px;
+    color: #ff0000;
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+    <h2>File Transfer App</h2>
+    <div class="input-container">
+        <input type="file" id="fileInput" multiple>
+        <button class="button" onclick="uploadFiles()">Upload Files</button>
+    </div>
+    <ul class="file-list" id="fileList">
+    </ul>
+</div>
+
+<div class="footer">
+    Made by WebHunters
+</div>
+
+<script>
+    function uploadFiles() {
+        var files = document.getElementById('fileInput').files;
+        var fileList = document.getElementById('fileList');
+
+        for (var i = 0; i < files.length; i++) {
+            var file = files[i];
+            var listItem = document.createElement('li');
+            listItem.textContent = file.name;
+            fileList.appendChild(listItem);
+        }
+    }
+</script>
+</body>
+</html>
